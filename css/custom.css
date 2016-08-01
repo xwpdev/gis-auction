@@ -1,0 +1,19 @@
+#content{
+    padding-left:40px;
+    padding-right:40px;
+    padding-top: 5px;
+}
+
+md-toolbar h3{
+    margin: auto;
+    font-weight: 500;
+}
+
+.card-media.c{
+    margin-left: 5px;
+}
+
+.set-bold{
+    font-weight: 800px;
+    font-size: 16px;
+}
