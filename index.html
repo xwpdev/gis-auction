@@ -1,177 +1,382 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Auction</title>
-        <!-- ANGULAR STYLES -->
-        <link rel="stylesheet" type="text/css" href="bower_components/angular-material/angular-material.min.css">
-        <link rel="stylesheet" type="text/css" href="bower_components/angular-material-data-table/dist/md-data-table.min.css">
-        <link rel="stylesheet" type="text/css" href="css/custom.css">
-    </head>
-    <body ng-app="MyApp" layout="column">
-        <md-toolbar>
-            <h3>Auction View</h3>
-        </md-toolbar>
-    <div class="container" layout="row" flex>
-        <md-sidenav md-is-locked-open="true" class="md-whiteframe-4dp">
+   <head>
+      <title>Auction</title>
+      <!-- ANGULAR STYLES -->
+      <link rel="stylesheet" type="text/css" href="bower_components/angular-material/angular-material.min.css">
+      <link rel="stylesheet" type="text/css" href="bower_components/angular-material-data-table/dist/md-data-table.min.css">
+      <link rel="stylesheet" type="text/css" href="css/custom.css">
+   </head>
+   <body ng-app="MyApp" layout="column">
+      <md-toolbar>
+         <h3>Auction View</h3>
+      </md-toolbar>
+      <div class="container" layout="row" flex>
+         <md-sidenav md-is-locked-open="true" class="md-whiteframe-4dp">
             <div layout="column" style="margin: auto;">
-                <label>Vehicle Make</label>
-                <md-select placeholder="Select Make" ng-model="vehicle.make" style="min-width: 200px;">
-                    <!--<md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>-->
-                </md-select>
-                <label>Vehicle Model</label>
-                <md-select placeholder="Select Model" ng-model="vehicle.model" style="min-width: 200px;">
-                    <!--<md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>-->
-                </md-select>
-                <label>Year</label>
-                <md-select placeholder="Select Year" ng-model="vehicle.year" style="min-width: 200px;">
-                    <!--<md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>-->
-                </md-select>
-                <md-input-container class="md-block">
-                    <label for="">Keyword</label>
-                    <input ng-model="vehicle.keyword">
-                </md-input-container>
-                <md-button class="md-raised md-primary">Search</md-button>
+               <label>Vehicle Make</label>
+               <md-select placeholder="Select Make" ng-model="vehicle.make" style="min-width: 200px;">
+                  <!--<md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>-->
+                  <md-option value="ALFA">
+                     ALFA            
+                  </md-option>
+                  <md-option value="ALFA ROMEO">
+                     ALFA ROMEO            
+                  </md-option>
+                  <md-option value="ALFAROMEO">
+                     ALFAROMEO            
+                  </md-option>
+                  <md-option value="AMG">
+                     AMG            
+                  </md-option>
+                  <md-option value="ATLAS">
+                     ATLAS            
+                  </md-option>
+                  <md-option value="AUDI">
+                     AUDI            
+                  </md-option>
+                  <md-option value="BENTLEY">
+                     BENTLEY            
+                  </md-option>
+                  <md-option value="BMW">
+                     BMW            
+                  </md-option>
+                  <md-option value="BMW ALPINA">
+                     BMW ALPINA            
+                  </md-option>
+                  <md-option value="BUICK">
+                     BUICK            
+                  </md-option>
+                  <md-option value="CADILLAC">
+                     CADILLAC            
+                  </md-option>
+                  <md-option value="CHEVROLET">
+                     CHEVROLET            
+                  </md-option>
+                  <md-option value="CHRYSLER">
+                     CHRYSLER            
+                  </md-option>
+                  <md-option value="CITROEN">
+                     CITROEN            
+                  </md-option>
+                  <md-option value="DAEWOO">
+                     DAEWOO            
+                  </md-option>
+                  <md-option value="DAIHATSU">
+                     DAIHATSU            
+                  </md-option>
+                  <md-option value="DAIMLER">
+                     DAIMLER            
+                  </md-option>
+                  <md-option value="DODGE">
+                     DODGE            
+                  </md-option>
+                  <md-option value="EUROPEAN FORD">
+                     EUROPEAN FORD            
+                  </md-option>
+                  <md-option value="FERRARI">
+                     FERRARI            
+                  </md-option>
+                  <md-option value="FIAT">
+                     FIAT            
+                  </md-option>
+                  <md-option value="FORD">
+                     FORD            
+                  </md-option>
+                  <md-option value="GM">
+                     GM            
+                  </md-option>
+                  <md-option value="HINO">
+                     HINO            
+                  </md-option>
+                  <md-option value="HITACHI">
+                     HITACHI            
+                  </md-option>
+                  <md-option value="HONDA">
+                     HONDA            
+                  </md-option>
+                  <md-option value="HUMMER">
+                     HUMMER            
+                  </md-option>
+                  <md-option value="HYUNDAI">
+                     HYUNDAI            
+                  </md-option>
+                  <md-option value="INFINITI">
+                     INFINITI            
+                  </md-option>
+                  <md-option value="ISEKI">
+                     ISEKI            
+                  </md-option>
+                  <md-option value="ISUZU">
+                     ISUZU            
+                  </md-option>
+                  <md-option value="JAGUAR">
+                     JAGUAR            
+                  </md-option>
+                  <md-option value="JEEP">
+                     JEEP            
+                  </md-option>
+                  <md-option value="KAWASAKI">
+                     KAWASAKI            
+                  </md-option>
+                  <md-option value="KOBELCO">
+                     KOBELCO            
+                  </md-option>
+                  <md-option value="KOMATSU">
+                     KOMATSU            
+                  </md-option>
+                  <md-option value="KUBOTA">
+                     KUBOTA            
+                  </md-option>
+                  <md-option value="LAMBORGHINI">
+                     LAMBORGHINI            
+                  </md-option>
+                  <md-option value="LANCIA">
+                     LANCIA            
+                  </md-option>
+                  <md-option value="LAND ROVER">
+                     LAND ROVER            
+                  </md-option>
+                  <md-option value="LEXUS">
+                     LEXUS            
+                  </md-option>
+                  <md-option value="LINCOLN">
+                     LINCOLN            
+                  </md-option>
+                  <md-option value="MAZDA">
+                     MAZDA            
+                  </md-option>
+                  <md-option value="MERCEDES BENZ">
+                     MERCEDES BENZ            
+                  </md-option>
+                  <md-option value="MERCURY">
+                     MERCURY            
+                  </md-option>
+                  <md-option value="MG">
+                     MG            
+                  </md-option>
+                  <md-option value="MINI">
+                     MINI            
+                  </md-option>
+                  <md-option value="MITSUBISHI">
+                     MITSUBISHI            
+                  </md-option>
+                  <md-option value="MITSUOKA">
+                     MITSUOKA            
+                  </md-option>
+                  <md-option value="NISSAN">
+                     NISSAN            
+                  </md-option>
+                  <md-option value="OPEL">
+                     OPEL            
+                  </md-option>
+                  <md-option value="OTHERS">
+                     OTHERS            
+                  </md-option>
+                  <md-option value="PEUGEOT">
+                     PEUGEOT            
+                  </md-option>
+                  <md-option value="PORSCHE">
+                     PORSCHE            
+                  </md-option>
+                  <md-option value="RENAULT">
+                     RENAULT            
+                  </md-option>
+                  <md-option value="ROLLS ROYCE">
+                     ROLLS ROYCE            
+                  </md-option>
+                  <md-option value="ROVER">
+                     ROVER            
+                  </md-option>
+                  <md-option value="SAAB">
+                     SAAB            
+                  </md-option>
+                  <md-option value="SAFARI">
+                     SAFARI            
+                  </md-option>
+                  <md-option value="SMART">
+                     SMART            
+                  </md-option>
+                  <md-option value="SUBARU">
+                     SUBARU            
+                  </md-option>
+                  <md-option value="SUMITOMO">
+                     SUMITOMO            
+                  </md-option>
+                  <md-option value="SUZUKI">
+                     SUZUKI            
+                  </md-option>
+                  <md-option value="TCM">
+                     TCM            
+                  </md-option>
+                  <md-option value="TITAN">
+                     TITAN            
+                  </md-option>
+                  <md-option value="TOYOTA">
+                     TOYOTA            
+                  </md-option>
+                  <md-option value="VOLKSWAGEN">
+                     VOLKSWAGEN            
+                  </md-option>
+                  <md-option value="VOLVO">
+                     VOLVO            
+                  </md-option>
+                  <md-option value="YANMAR">
+                     YANMAR            
+                  </md-option>
+               </md-select>
+               <label>Vehicle Model</label>
+               <md-select placeholder="Select Model" ng-model="vehicle.model" style="min-width: 200px;">
+                  <!--<md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>-->
+               </md-select>
+               <label>Year</label>
+               <md-select placeholder="Select Year" ng-model="vehicle.year" style="min-width: 200px;">
+                  <!--<md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>-->
+               </md-select>
+               <md-input-container class="md-block">
+                  <label for="">Keyword</label>
+                  <input ng-model="vehicle.keyword">
+               </md-input-container>
+               <md-button class="md-raised md-primary">Search</md-button>
             </div>
-        </md-sidenav>
-        <md-content id="content" flex>
+         </md-sidenav>
+         <md-content id="content" flex>
             <!--<div layout="row">
-                <md-card md-theme="default" md-theme-watch="" class="_md md-default-theme">
-                    <md-card-title>
-                    <md-card-title-text>
-                        <span class="md-title">Toyota AXIO</span>
-                        <span class="md-subhead">2015</span>
-                    </md-card-title-text>
-                    <md-card-title-media>
-                        <div class="md-media-md card-media c">
-                            <img src="http://nikoba.com/uplode-vehicle-images/minithumb/vehicle_image_1468393790-IMG_0487.JPG" alt="">
-                        </div>
-                    </md-card-title-media>
-                    </md-card-title>
-                </md-card>
-
-                <md-card md-theme="default" md-theme-watch="" class="_md md-default-theme">
-                    <md-card-title>
-                    <md-card-title-text>
-                        <span class="md-title">Honda GRACE</span>
-                        <span class="md-subhead">2015</span>
-                    </md-card-title-text>
-                    <md-card-title-media>
-                        <div class="md-media-md card-media c">
-                            <img src="http://nikoba.com/uplode-vehicle-images/minithumb/vehicle_image_1468816232-1.jpg" alt="">
-                        </div>
-                    </md-card-title-media>
-                    </md-card-title>
-                </md-card>
-
-                <md-card md-theme="default" md-theme-watch="" class="_md md-default-theme">
-                    <md-card-title>
-                    <md-card-title-text>
-                        <span class="md-title">Toyota AQUA</span>
-                        <span class="md-subhead">2015</span>
-                    </md-card-title-text>
-                    <md-card-title-media>
-                        <div class="md-media-md card-media c">
-                            <img src="http://www.nikoba.com/uplode-vehicle-images/minithumb/vehicle_image_1468561943-1.jpg" alt="">
-                        </div>
-                    </md-card-title-media>
-                    </md-card-title>
-                </md-card>
-            </div>-->
-
+               <md-card md-theme="default" md-theme-watch="" class="_md md-default-theme">
+                   <md-card-title>
+                   <md-card-title-text>
+                       <span class="md-title">Toyota AXIO</span>
+                       <span class="md-subhead">2015</span>
+                   </md-card-title-text>
+                   <md-card-title-media>
+                       <div class="md-media-md card-media c">
+                           <img src="http://nikoba.com/uplode-vehicle-images/minithumb/vehicle_image_1468393790-IMG_0487.JPG" alt="">
+                       </div>
+                   </md-card-title-media>
+                   </md-card-title>
+               </md-card>
+               
+               <md-card md-theme="default" md-theme-watch="" class="_md md-default-theme">
+                   <md-card-title>
+                   <md-card-title-text>
+                       <span class="md-title">Honda GRACE</span>
+                       <span class="md-subhead">2015</span>
+                   </md-card-title-text>
+                   <md-card-title-media>
+                       <div class="md-media-md card-media c">
+                           <img src="http://nikoba.com/uplode-vehicle-images/minithumb/vehicle_image_1468816232-1.jpg" alt="">
+                       </div>
+                   </md-card-title-media>
+                   </md-card-title>
+               </md-card>
+               
+               <md-card md-theme="default" md-theme-watch="" class="_md md-default-theme">
+                   <md-card-title>
+                   <md-card-title-text>
+                       <span class="md-title">Toyota AQUA</span>
+                       <span class="md-subhead">2015</span>
+                   </md-card-title-text>
+                   <md-card-title-media>
+                       <div class="md-media-md card-media c">
+                           <img src="http://www.nikoba.com/uplode-vehicle-images/minithumb/vehicle_image_1468561943-1.jpg" alt="">
+                       </div>
+                   </md-card-title-media>
+                   </md-card-title>
+               </md-card>
+               </div>-->
             <md-table-container>
-                <table md-table md-row-select multiple ng-model="selected" md-progress="promise">
-                    <thead md-head md-order="query.order" md-on-reorder="getDesserts" class="set-bold">
-                    <tr md-row>
+               <table md-table md-row-select multiple ng-model="selected" md-progress="promise">
+                  <thead md-head md-order="query.order" md-on-reorder="getDesserts" class="set-bold">
+                     <tr md-row>
                         <th md-column md-order-by="nameToLower"></th>
                         <th md-column md-order-by="calories.value"><span>Make</span></th>
                         <th md-column>Model</th>
                         <th md-column>Year</th>
                         <th md-column>Description</th>
                         <th></th>
-                    </tr>
-                    </thead>
-                    <tbody md-body>
-                        <tr>
-                            <td md-cell>
-                                <div style="padding:10px;">
-                                    <img src="http://nikoba.com/uplode-vehicle-images/minithumb/vehicle_image_1468393790-IMG_0487.JPG" alt="" style="max-width:50px;">
-                                </div>
-                            </td>
-                            <td md-cell>Toyota</td>
-                            <td md-cell>AXIO</td>
-                            <td md-cell>2015</td>
-                            <td md-cell>Gold Colour Grade 4.5</td>
-                            <td md-cell>
-                                <md-button class="md-raised md-primary">View</md-button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td md-cell>
-                                <div style="padding:10px;">
-                                    <img src="http://nikoba.com/uplode-vehicle-images/minithumb/vehicle_image_1468393790-IMG_0487.JPG" alt="" style="max-width:50px;">
-                                </div>
-                            </td>
-                            <td md-cell>Toyota</td>
-                            <td md-cell>AXIO</td>
-                            <td md-cell>2015</td>
-                            <td md-cell>Gold Colour Grade 4.5</td>
-                            <td md-cell>
-                                <md-button class="md-raised md-primary">View</md-button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td md-cell>
-                                <div style="padding:10px;">
-                                    <img src="http://nikoba.com/uplode-vehicle-images/minithumb/vehicle_image_1468393790-IMG_0487.JPG" alt="" style="max-width:50px;">
-                                </div>
-                            </td>
-                            <td md-cell>Toyota</td>
-                            <td md-cell>AXIO</td>
-                            <td md-cell>2015</td>
-                            <td md-cell>Gold Colour Grade 4.5</td>
-                            <td md-cell>
-                                <md-button class="md-raised md-primary">View</md-button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td md-cell>
-                                <div style="padding:10px;">
-                                    <img src="http://nikoba.com/uplode-vehicle-images/minithumb/vehicle_image_1468393790-IMG_0487.JPG" alt="" style="max-width:50px;">
-                                </div>
-                            </td>
-                            <td md-cell>Toyota</td>
-                            <td md-cell>AXIO</td>
-                            <td md-cell>2015</td>
-                            <td md-cell>Gold Colour Grade 4.5</td>
-                            <td md-cell>
-                                <md-button class="md-raised md-primary">View</md-button>
-                            </td>
-                        </tr>
-                        <!--<tr md-row md-select="dessert" md-select-id="name" md-auto-select ng-repeat="dessert in desserts.data">
-                            <td md-cell>{{dessert.name}}</td>
-                            <td md-cell>{{dessert.calories.value}}</td>
-                            <td md-cell>{{dessert.fat.value | number: 1}}</td>
-                            <td md-cell>{{dessert.carbs.value}}</td>
-                            <td md-cell>{{dessert.protein.value | number: 1}}</td>
-                            <td md-cell>{{dessert.sodium.value}}</td>
-                            <td md-cell>{{dessert.calcium.value}}{{dessert.calcium.unit}}</td>
-                            <td md-cell>{{dessert.iron.value}}{{dessert.iron.unit}}</td>
+                     </tr>
+                  </thead>
+                  <tbody md-body>
+                     <tr>
+                        <td md-cell>
+                           <div style="padding:10px;">
+                              <img src="http://nikoba.com/uplode-vehicle-images/minithumb/vehicle_image_1468393790-IMG_0487.JPG" alt="" style="max-width:50px;">
+                           </div>
+                        </td>
+                        <td md-cell>Toyota</td>
+                        <td md-cell>AXIO</td>
+                        <td md-cell>2015</td>
+                        <td md-cell>Gold Colour Grade 4.5</td>
+                        <td md-cell>
+                           <md-button class="md-raised md-primary">View</md-button>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td md-cell>
+                           <div style="padding:10px;">
+                              <img src="http://nikoba.com/uplode-vehicle-images/minithumb/vehicle_image_1468393790-IMG_0487.JPG" alt="" style="max-width:50px;">
+                           </div>
+                        </td>
+                        <td md-cell>Toyota</td>
+                        <td md-cell>AXIO</td>
+                        <td md-cell>2015</td>
+                        <td md-cell>Gold Colour Grade 4.5</td>
+                        <td md-cell>
+                           <md-button class="md-raised md-primary">View</md-button>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td md-cell>
+                           <div style="padding:10px;">
+                              <img src="http://nikoba.com/uplode-vehicle-images/minithumb/vehicle_image_1468393790-IMG_0487.JPG" alt="" style="max-width:50px;">
+                           </div>
+                        </td>
+                        <td md-cell>Toyota</td>
+                        <td md-cell>AXIO</td>
+                        <td md-cell>2015</td>
+                        <td md-cell>Gold Colour Grade 4.5</td>
+                        <td md-cell>
+                           <md-button class="md-raised md-primary">View</md-button>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td md-cell>
+                           <div style="padding:10px;">
+                              <img src="http://nikoba.com/uplode-vehicle-images/minithumb/vehicle_image_1468393790-IMG_0487.JPG" alt="" style="max-width:50px;">
+                           </div>
+                        </td>
+                        <td md-cell>Toyota</td>
+                        <td md-cell>AXIO</td>
+                        <td md-cell>2015</td>
+                        <td md-cell>Gold Colour Grade 4.5</td>
+                        <td md-cell>
+                           <md-button class="md-raised md-primary">View</md-button>
+                        </td>
+                     </tr>
+                     <!--<tr md-row md-select="dessert" md-select-id="name" md-auto-select ng-repeat="dessert in desserts.data">
+                        <td md-cell>{{dessert.name}}</td>
+                        <td md-cell>{{dessert.calories.value}}</td>
+                        <td md-cell>{{dessert.fat.value | number: 1}}</td>
+                        <td md-cell>{{dessert.carbs.value}}</td>
+                        <td md-cell>{{dessert.protein.value | number: 1}}</td>
+                        <td md-cell>{{dessert.sodium.value}}</td>
+                        <td md-cell>{{dessert.calcium.value}}{{dessert.calcium.unit}}</td>
+                        <td md-cell>{{dessert.iron.value}}{{dessert.iron.unit}}</td>
                         </tr>-->
-                    <tr></tr>
-                    </tbody>
-                </table>
+                     <tr></tr>
+                  </tbody>
+               </table>
             </md-table-container>
             <md-table-pagination md-limit="query.limit" md-limit-options="[5, 10, 15]" md-page="query.page" md-total="{{desserts.count}}" md-on-paginate="getDesserts" md-page-select></md-table-pagination>
-        </md-content>    
-    </div>
-        
-        <!-- CORE SCRIPTS -->
-        <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
-        <script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
-        <script type="text/javascript" src="bower_components/angular-aria/angular-aria.min.js"></script>
-        <script type="text/javascript" src="bower_components/angular-material/angular-material.min.js"></script>
-        <script type="text/javascript" src="bower_components/angular-material-data-table/dist/md-data-table.min.js"></script>
-        <!-- CUSTOM SCRIPTS -->
-        <script src="app/app.js"></script>
-    </body>
+         </md-content>
+      </div>
+      <!-- CORE SCRIPTS -->
+      <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+      <script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
+      <script type="text/javascript" src="bower_components/angular-aria/angular-aria.min.js"></script>
+      <script type="text/javascript" src="bower_components/angular-material/angular-material.min.js"></script>
+      <script type="text/javascript" src="bower_components/angular-material-data-table/dist/md-data-table.min.js"></script>
+      <!-- CUSTOM SCRIPTS -->
+      <script src="app/app.js"></script>
+   </body>
 </html>
